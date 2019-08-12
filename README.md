@@ -12,11 +12,10 @@ Call this to get the Data:
 To populate data to UITableView, we need to implement the UITableViewDataSource protocol.
 
 ```
-@interface ViewController : NSViewController <NSTableViewDataSource> {
+@interface ViewController () <UITableViewDataSource> {
     NSMutableArray *myData;
+    __weak IBOutlet UITableView *myTableView;
 }
-
-...
 
 @end
 ```

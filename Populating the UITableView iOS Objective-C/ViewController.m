@@ -38,10 +38,8 @@
     
     NSString *myCellID = @"myCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myCellID];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myCellID forIndexPath:indexPath];
     
-    // we don't need to check if cell is nil or not
-    // because we have already defined prototype cell in the storyboard
     cell.textLabel.text = studentName;
     
     cell.detailTextLabel.text = studentIDAndAddress;
